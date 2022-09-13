@@ -7,7 +7,7 @@ const Meta = () => {
         <title>Coffee Shop Admin</title>
         <meta name="keyword" content="Dashboard Page"/>
         <meta name='description' content="This Page Only Available To Admin" />
-        <link rel="icon" href="/favicon.png" />
+        <link rel="icon" href="/favicon.ico" />
         <meta charSet='utf-8'/>
       </Head>
     </>
