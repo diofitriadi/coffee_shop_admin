@@ -54,7 +54,7 @@ export const UpdateProduct = (formData, id, token) => {
 // export const UpdateEmployee = (id,body)=>{
 //           return (dispatch)=>{
 //           dispatch(UpdateEmployeeRequest)
-//           axios.patch(`${URL_BE}/api/v1/employees/${id}`,{
+//           axios.patch(`${NEXT_PUBLIC_URL_BE}/api/v1/employees/${id}`,{
 //                     data: body,
 //                     headers : {
 //                               authorization: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE2LCJyb2xlIjoiZW1wbG95ZWUiLCJpYXQiOjE2NTk5NDcyNjgsImV4cCI6MTY2MDAzMzY2OH0.AU-VsL8HtfGxX1H0LArdXZmfK1sAp4tl5ZgHVjrWSq8"

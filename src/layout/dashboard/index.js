@@ -44,7 +44,7 @@ const Dashboard = () => {
     }));
     axios({
       method: "GET",
-      url: `https://coffee-shop-be-dio.herokuapp.com/api/v1/product/?product_name=${product_name}&categories_name=${categories_name}&order=${order}&sortBy=${sortBy}`,
+      url: `${process.env.NEXT_PUBLIC_URL_BE}/api/v1/product/?product_name=${product_name}&categories_name=${categories_name}&order=${order}&sortBy=${sortBy}`,
     }).then((res) => {
       setGetProduct({
         loading: false,
@@ -112,7 +112,7 @@ const Dashboard = () => {
       const result = await axios({
         method: "PATCH",
         data: formData,
-        url: `https://coffee-shop-be-dio.herokuapp.com/api/v1/product/${id}`,
+        url: `${process.env.NEXT_PUBLIC_URL_BE}/api/v1/product/${id}`,
         headers: {
           authorization: auth.token,
         },
@@ -143,7 +143,7 @@ const Dashboard = () => {
       if (result.isConfirmed) {
         axios({
           method: "DELETE",
-          url: `https://coffee-shop-be-dio.herokuapp.com/api/v1/product/${id}`,
+          url: `${process.env.NEXT_PUBLIC_URL_BE}/api/v1/product/${id}`,
           headers: {
             authorization: auth.token,
           },
@@ -161,7 +161,7 @@ const Dashboard = () => {
   //   if (window.confirm("Are you sure?")) {
   //     axios({
   //       method: "DELETE",
-  //       url: `https://coffee-shop-be-dio.herokuapp.com/api/v1/product/${id}`,
+  //       url: `${process.env.NEXT_PUBLIC_URL_BE}/api/v1/product/${id}`,
   //       headers: {
   //         authorization: auth.token,
   //       },
@@ -192,7 +192,7 @@ const Dashboard = () => {
             <td className="border-2">{product.categories_name}</td>
             <td className="border-2">
               <img
-                src={`https://coffee-shop-be-dio.herokuapp.com/uploads/${product.product_image}`}
+                src={`${process.env.NEXT_PUBLIC_URL_BE}/uploads/${product.product_image}`}
                 className="w-[130px] h-[110px]"
               />
             </td>

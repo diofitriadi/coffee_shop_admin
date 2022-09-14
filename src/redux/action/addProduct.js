@@ -26,7 +26,7 @@ export const AddProduct = (formData, token) => {
     dispatch(AddProductRequest());
     axios({
       method: "POST",
-      url: `https://coffee-shop-be-dio.herokuapp.com/api/v1/product`,
+      url: `${process.env.NEXT_PUBLIC_URL_BE}/api/v1/product`,
       headers: { 
         authorization: token,
         'Content-Type': 'multipart/form-data'

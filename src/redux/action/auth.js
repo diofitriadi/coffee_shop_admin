@@ -25,7 +25,7 @@ export const Login = (formData) => {
         dispatch(LoginRequest())
         axios({
             method: "POST",
-            url: `https://coffee-shop-be-dio.herokuapp.com/api/v1/auth/login`,
+            url: `${process.env.NEXT_PUBLIC_URL_BE}/api/v1/auth/login`,
             data: {
                 email: formData.email,
                 password: formData.password
