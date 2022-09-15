@@ -118,13 +118,24 @@ const Dashboard = () => {
         },
       });
       if (result.data.status === 200) {
-        alert("Succesfully Updated");
+        Swal.fire({
+          icon: "success",
+          text: "Data Successfully Updated",
+        });
         setRefetch(!refetch); //refetch data
       } else {
-        alert("failed, try again");
+        Swal.fire({
+          icon: "error",
+          title: "Update Product Failed",
+          text: "Please Try Again",
+        });
       }
     } catch (err) {
-      alert(err);
+      Swal.fire({
+        icon: "error",
+        title: "Update Product Failed",
+        text: "Please Try Again",
+      });
       console.log(err);
     }
   };
@@ -157,24 +168,6 @@ const Dashboard = () => {
       }
     })
   }
-  // const handleDelete = async (id) => {
-  //   if (window.confirm("Are you sure?")) {
-  //     axios({
-  //       method: "DELETE",
-  //       url: `${process.env.NEXT_PUBLIC_URL_BE}/api/v1/product/${id}`,
-  //       headers: {
-  //         authorization: auth.token,
-  //       },
-  //     })
-  //       .then((res) => {
-  //         alert(res.data.message);
-  //         setRefetch(!refetch);
-  //       })
-  //       .catch((err) => {
-  //         alert(err.response.data.message);
-  //       });
-  //   }
-  // };
 
   // Handle Pagination
   const [pageNumber, setPageNumber] = useState(0);
