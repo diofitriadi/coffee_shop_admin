@@ -227,18 +227,18 @@ const Dashboard = () => {
         <div className="flex justify-between my-5 align-end">
           <div className="flex flex-col justify-center w-1/5">
             <input
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6A4029] focus:border-[#6A4029] block w-full p-2.5 placeholder-gray-400"
+              className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6A4029] focus:border-[#6A4029] block w-full p-2.5 placeholder-black"
               placeholder="Search Product"
               onChange={(e) => {
                 setRefetch(!refetch);
                 if (search === "product_name") {
                   setQuery({
-                    product_name: e.target.value,
+                    product_name: e.target.value.toLowerCase(),
                     order: "product_name",
                   });
                 } else if (search === "categories_name") {
                   setQuery({
-                    categories_name: e.target.value,
+                    categories_name: e.target.value.toLowerCase(),
                     order: "categories_name",
                   });
                 }
@@ -247,12 +247,12 @@ const Dashboard = () => {
             <div className="col-4">
               <label
                 htmlFor="sort"
-                className="block mb-2 text-sm font-medium text-gray-400"
+                className="block mb-2 mt-2 text-sm font-medium text-gray-400"
               >
                 Sort by :
               </label>
               <select
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6A4029] focus:border-[#6A4029] block w-full p-2.5 placeholder-gray-400 "
+                className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6A4029] focus:border-[#6A4029] block w-full p-2.5 placeholder-gray-400 "
                 aria-label="Default select example"
                 onChange={(e) => {
                   setSearch(e.target.value);
@@ -265,12 +265,12 @@ const Dashboard = () => {
             <div className="col-4">
               <label
                 htmlFor="order"
-                className="block mb-2 text-sm font-medium text-gray-400"
+                className="block mb-2 mt-2 text-sm font-medium text-gray-400"
               >
                 Order By :
               </label>
               <select
-                className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6A4029] focus:border-[#6A4029] block w-full p-2.5"
+                className="bg-white border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-[#6A4029] focus:border-[#6A4029] block w-full p-2.5"
                 aria-label="Default select example"
                 onChange={(e) => {
                   setQuery((prevData) => ({
@@ -447,7 +447,7 @@ const Dashboard = () => {
                     className="bg-transparent border-0 text-black float-right"
                     onClick={() => setEditModal(false)}
                   >
-                    <span className="text-black opacity-7 h-6 w-6 text-xl block bg-gray-400 py-0 rounded-full">
+                    <span className="text-white opacity-7 h-6 w-6 text-xl block py-0 rounded-full">
                       x
                     </span>
                   </button>
@@ -468,7 +468,7 @@ const Dashboard = () => {
                           categories_id: e.target.value,
                         }));
                       }}
-                      defaultValue={formEdit.categories_id}
+                      defaultValue={formEdit.categories_name}
                     />
                     <label className="block text-black text-sm font-bold mb-1">
                       Product Name
