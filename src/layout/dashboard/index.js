@@ -223,7 +223,7 @@ const Dashboard = () => {
 
   return (
     <Layout>
-      <div className="min-w-full mx-auto text-sm py-6 px-24 bg-gray-100 h-[1500px]">
+      <div className="min-w-full mx-auto text-sm py-6 px-24 bg-gray-100 h-[1000px]">
         <div className="flex justify-between my-5 align-end">
           <div className="flex flex-col justify-center w-1/5">
             <input
