@@ -61,7 +61,7 @@ some technology used in this project.
 
 |name  | web   
 | ------------- | ------------- 
-| Admin Page (CRUD) | ![Admin](https://i.ibb.co/g9Skgd8/Tickitz-homepage.png) |
+| Admin Page (CRUD) | ![Admin]([https://i.ibb.co/g9Skgd8/Tickitz-homepage.png](https://drive.google.com/file/d/1Ai9MPTrw6XwTuPif_vyRGyRyK16DMgLi/view?usp=sharing)) |
 | Crud |![post-crud](https://i.ibb.co/qFDPGTR/Tickitz-Admin-CRUD.png) |
 | Login | ![login](https://i.ibb.co/QHs7StG/Tickitz-Sign-In.png) |
 | Modal |![modal](https://i.ibb.co/qFDPGTR/Tickitz-Admin-CRUD.png) |
