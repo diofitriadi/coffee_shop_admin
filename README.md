@@ -107,7 +107,7 @@ configuration .env
 4. Start the project
 
 ```sh
-npm start
+npm run dev
 ```
 
 <!-- Contributors -->
