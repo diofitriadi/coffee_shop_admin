@@ -1,4 +1,4 @@
-# Tickitz App
+# Coffee Shop Admin App
 <!-- NAVIGATION -->
 <ol>
     <li>
